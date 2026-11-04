@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "veru": {
+      "type": "http",
+      "url": "https://veru.legal/mcp"
+    }
+  }
+}

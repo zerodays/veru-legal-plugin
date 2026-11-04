@@ -1,0 +1,88 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "veru-legal",
+  "version": "1.0.0",
+  "description": "Research Slovenian and EU legislation and case law with Veru, with every conclusion cited to official sources.",
+  "author": {
+    "name": "verulabs d.o.o.",
+    "email": "anze@veru.legal",
+    "url": "https://veru.legal"
+  },
+  "homepage": "https://veru.legal",
+  "repository": "https://github.com/zerodays/veru-legal-plugin",
+  "license": "MIT",
+  "keywords": ["legal", "law", "case-law", "slovenia", "eu", "gdpr", "legal-research"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Veru Legal",
+        "shortDescription": "Slovenian & EU legal research",
+        "longDescription": "Veru brings Slovenian and EU legislation and case law into your conversation, so you can research, reason and draft with sources you can verify. Veru pulls the current legislation and case law relevant to your question from official sources (PisRS, sodnapraksa.si, EUR-Lex), with coverage of 200+ jurisdictions, and returns them with canonical citations so every conclusion is traceable.\n\nBuilt by practising lawyers and engineers in Ljubljana for law firms, in-house legal teams and universities.\n\nRequires a Veru account on a paid plan. Veru is a tool for legal professionals and does not replace professional legal judgment: always review the cited sources before relying on the result.",
+        "developerName": "verulabs d.o.o.",
+        "category": "Productivity",
+        "capabilities": ["Search legislation", "Search case law", "Cite official sources"],
+        "websiteURL": "https://veru.legal",
+        "privacyPolicyURL": "https://veru.legal/en/privacy",
+        "termsOfServiceURL": "https://veru.legal/en/terms",
+        "defaultPrompt": [
+          "What is the limitation period for damages claims under the Slovenian Obligations Code?",
+          "Find Slovenian case law on termination of employment for business reasons.",
+          "Which GDPR and ZVOP-2 provisions apply to processing employee biometric data?"
+        ],
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/icon.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Statutory limitation period with case law",
+              "prompt": "Using Veru, what is the limitation period for a claim for damages under the Slovenian Obligations Code, and is there Supreme Court case law on when it starts to run?",
+              "tools_triggered": "fetch_legal_background",
+              "expected_behavior": "Cites the relevant articles of the Obligations Code (OZ) and Supreme Court decisions with canonical identifiers and links."
+            },
+            {
+              "description": "Case law search and summary",
+              "prompt": "Find recent sodnapraksa.si decisions on termination of an employment contract for business reasons and summarise the key holdings.",
+              "tools_triggered": "fetch_legal_background",
+              "expected_behavior": "Returns several decisions from sodnapraksa.si with case numbers and summarises each holding."
+            },
+            {
+              "description": "GDPR and national law together",
+              "prompt": "Which GDPR provisions and Slovenian ZVOP-2 articles apply to processing employee biometric data? Cite the sources.",
+              "tools_triggered": "fetch_legal_background",
+              "expected_behavior": "Cites GDPR articles from EUR-Lex and ZVOP-2 articles from PisRS and explains how they interact."
+            },
+            {
+              "description": "EU directive transposition",
+              "prompt": "How did Slovenia transpose the EU Whistleblower Directive, and which national act applies?",
+              "tools_triggered": "fetch_legal_background",
+              "expected_behavior": "Identifies Directive (EU) 2019/1937 and the Slovenian implementing act (ZZPri) with citations to both."
+            },
+            {
+              "description": "Contract clause legality",
+              "prompt": "Is a contractual penalty clause enforceable under Slovenian law if it is agreed for a monetary obligation?",
+              "tools_triggered": "fetch_legal_background",
+              "expected_behavior": "Cites the Obligations Code provisions on contractual penalties and relevant case law, and answers with the legal basis."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Non-legal request",
+              "prompt": "Write me a poem about the sea."
+            },
+            {
+              "description": "Request for an action Veru cannot perform",
+              "prompt": "File this lawsuit with the Ljubljana District Court for me."
+            },
+            {
+              "description": "General knowledge question",
+              "prompt": "What is the weather in Ljubljana today?"
+            }
+          ]
+        },
+        "commerce": false
+      }
+    }
+  }
+}
