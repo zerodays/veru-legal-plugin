@@ -48,7 +48,6 @@ Veru is a tool for legal professionals and does not replace professional legal j
 ## Support
 
 - Website: [veru.legal](https://veru.legal)
-- Email: anze@veru.legal
-- Support in Slovenia, by email, by phone and in person
+- Email: contact@veru.legal
 
 verulabs d.o.o., Miklošičeva cesta 30, 1000 Ljubljana, Slovenia, EU

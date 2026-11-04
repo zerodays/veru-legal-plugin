@@ -5,7 +5,7 @@
   "description": "Research Slovenian and EU legislation and case law with Veru, with every conclusion cited to official sources.",
   "author": {
     "name": "verulabs d.o.o.",
-    "email": "anze@veru.legal",
+    "email": "contact@veru.legal",
     "url": "https://veru.legal"
   },
   "homepage": "https://veru.legal",
@@ -22,6 +22,7 @@
         "category": "Productivity",
         "capabilities": ["Search legislation", "Search case law", "Cite official sources"],
         "websiteURL": "https://veru.legal",
+        "supportURL": "https://veru.legal/en/about",
         "privacyPolicyURL": "https://veru.legal/en/privacy",
         "termsOfServiceURL": "https://veru.legal/en/terms",
         "defaultPrompt": [

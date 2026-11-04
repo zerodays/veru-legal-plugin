@@ -5,7 +5,7 @@
   "description": "Research Slovenian and EU legislation and case law with Veru, with every conclusion cited to official sources.",
   "author": {
     "name": "verulabs d.o.o.",
-    "email": "anze@veru.legal",
+    "email": "contact@veru.legal",
     "url": "https://veru.legal"
   },
   "homepage": "https://veru.legal",
@@ -14,6 +14,7 @@
   "keywords": ["legal", "law", "case-law", "slovenia", "eu", "gdpr", "legal-research"],
   "icon": "./assets/icon.png",
   "documentationUrl": "https://github.com/zerodays/veru-legal-plugin#readme",
+  "supportUrl": "https://veru.legal/en/about",
   "privacyPolicyUrl": "https://veru.legal/en/privacy",
   "termsOfServiceUrl": "https://veru.legal/en/terms"
 }
