@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "veru-legal",
   "version": "1.0.0",
-  "description": "Research Slovenian and EU legislation and case law with Veru, with every conclusion cited to official sources.",
+  "description": "Research legislation and case law in Slovenia, the EU and 200+ other jurisdictions with Veru, with every conclusion cited to official sources.",
   "author": {
     "name": "verulabs d.o.o.",
     "email": "contact@veru.legal",
@@ -11,13 +11,13 @@
   "homepage": "https://veru.legal",
   "repository": "https://github.com/zerodays/veru-legal-plugin",
   "license": "MIT",
-  "keywords": ["legal", "law", "case-law", "slovenia", "eu", "gdpr", "legal-research"],
+  "keywords": ["legal", "law", "legislation", "case-law", "legal-research", "eu", "gdpr", "slovenia"],
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "Veru Legal",
-        "shortDescription": "Slovenian & EU legal research",
-        "longDescription": "Veru brings Slovenian and EU legislation and case law into your conversation, so you can research, reason and draft with sources you can verify. Veru pulls the current legislation and case law relevant to your question from official sources (PisRS, sodnapraksa.si, EUR-Lex), with coverage of 200+ jurisdictions, and returns them with canonical citations so every conclusion is traceable.\n\nBuilt by practising lawyers and engineers in Ljubljana for law firms, in-house legal teams and universities.\n\nRequires a Veru account on a paid plan. Veru is a tool for legal professionals and does not replace professional legal judgment: always review the cited sources before relying on the result.",
+        "shortDescription": "Legal research with citations",
+        "longDescription": "Veru brings legislation and case law into your conversation, so you can research, reason and draft with sources you can verify. For each question Veru searches the official legal sources of the relevant jurisdiction, reads promising documents in full and returns the relevant statutes and decisions verbatim with canonical citations, so every conclusion is traceable. Coverage spans 200+ jurisdictions; Slovenian and EU law comes directly from PisRS, sodnapraksa.si and EUR-Lex.\n\nBuilt by practising lawyers and engineers in Ljubljana for law firms, in-house legal teams and universities.\n\nRequires a Veru account on a paid plan. Veru is a tool for legal professionals and does not replace professional legal judgment: always review the cited sources before relying on the result.",
         "developerName": "verulabs d.o.o.",
         "category": "Productivity",
         "capabilities": ["Search legislation", "Search case law", "Cite official sources"],
@@ -27,8 +27,8 @@
         "termsOfServiceURL": "https://veru.legal/en/terms",
         "defaultPrompt": [
           "What is the limitation period for damages claims under the Slovenian Obligations Code?",
-          "Find Slovenian case law on termination of employment for business reasons.",
-          "Which GDPR and ZVOP-2 provisions apply to processing employee biometric data?"
+          "When can an employer in Germany dismiss an employee for operational reasons?",
+          "Which GDPR articles govern processing of employee biometric data?"
         ],
         "composerIcon": "./assets/icon.png",
         "logo": "./assets/icon.png"
@@ -55,16 +55,16 @@
               "expected_behavior": "Cites GDPR articles from EUR-Lex and ZVOP-2 articles from PisRS and explains how they interact."
             },
             {
-              "description": "EU directive transposition",
-              "prompt": "How did Slovenia transpose the EU Whistleblower Directive, and which national act applies?",
+              "description": "German employment law with case law",
+              "prompt": "When can an employer in Germany dismiss an employee for operational reasons, and what does the Federal Labour Court require for the social selection?",
               "tools_triggered": "fetch_legal_background",
-              "expected_behavior": "Identifies Directive (EU) 2019/1937 and the Slovenian implementing act (ZZPri) with citations to both."
+              "expected_behavior": "Cites § 1 KSchG and related provisions and Federal Labour Court (BAG) decisions with case numbers and dates."
             },
             {
-              "description": "Contract clause legality",
-              "prompt": "Is a contractual penalty clause enforceable under Slovenian law if it is agreed for a monetary obligation?",
+              "description": "UK statute research",
+              "prompt": "Is redundancy a fair reason for dismissal in the United Kingdom? Cite the statute.",
               "tools_triggered": "fetch_legal_background",
-              "expected_behavior": "Cites the Obligations Code provisions on contractual penalties and relevant case law, and answers with the legal basis."
+              "expected_behavior": "Cites sections 94, 98 and 139 of the Employment Rights Act 1996 and explains redundancy as a potentially fair reason."
             }
           ],
           "negative": [
@@ -74,11 +74,11 @@
             },
             {
               "description": "Request for an action Veru cannot perform",
-              "prompt": "File this lawsuit with the Ljubljana District Court for me."
+              "prompt": "File this lawsuit with the court for me."
             },
             {
               "description": "General knowledge question",
-              "prompt": "What is the weather in Ljubljana today?"
+              "prompt": "What is the weather in Paris today?"
             }
           ]
         },

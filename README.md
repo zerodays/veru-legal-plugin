@@ -9,16 +9,16 @@ Veru is built by practising lawyers and engineers in Ljubljana and is used by Sl
 This plugin connects Claude (chat, Cowork and Claude Code) to Veru's legal research through the Veru MCP server. With it, Claude can:
 
 - **Research the law in context.** Veru pulls in the current legislation and case law relevant to your question, instead of you searching databases before every task.
-- **Work from trusted official sources.** Slovenian and EU law comes from PisRS, sodnapraksa.si and EUR-Lex, with coverage of 200+ jurisdictions.
+- **Work from trusted official sources.** Veru searches each jurisdiction's official legal sources, with coverage of 200+ jurisdictions. Slovenian and EU law comes directly from PisRS, sodnapraksa.si and EUR-Lex.
 - **Read the full text.** Veru reads promising documents in full and returns the relevant statutes and decisions verbatim, not summaries.
-- **Cite every source.** Statutes come with their canonical identifier (for example "ZDR-1, 115. člen" or a CELEX number) and decisions with court, case number and date, so you can stand behind what you deliver.
+- **Cite every source.** Statutes come with their canonical identifier (for example "§ 1 KSchG", "ZDR-1, 115. člen" or a CELEX number) and decisions with court, case number and date, so you can stand behind what you deliver.
 
 ## Example prompts
 
 - "Using Veru, what is the limitation period for a claim for damages under the Slovenian Obligations Code, and is there Supreme Court case law on when it starts to run?"
-- "Find recent sodnapraksa.si decisions on termination of an employment contract for business reasons and summarise the key holdings."
-- "Check this NDA against Slovenian and EU law and list the clauses that need revising, with the legal basis for each."
-- "Which GDPR provisions and Slovenian ZVOP-2 articles apply to processing employee biometric data? Cite the sources."
+- "When can an employer in Germany dismiss an employee for operational reasons, and what does the Federal Labour Court require for the social selection?"
+- "Check this NDA against the law of its governing jurisdiction and list the clauses that need revising, with the legal basis for each."
+- "Is redundancy a fair reason for dismissal in the United Kingdom? Cite the statute."
 
 ## Requirements
 

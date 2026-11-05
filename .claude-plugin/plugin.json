@@ -2,7 +2,7 @@
   "name": "veru-legal",
   "displayName": "Veru Legal",
   "version": "1.0.0",
-  "description": "Research Slovenian and EU legislation and case law with Veru, with every conclusion cited to official sources.",
+  "description": "Research legislation and case law in Slovenia, the EU and 200+ other jurisdictions with Veru, with every conclusion cited to official sources.",
   "author": {
     "name": "verulabs d.o.o.",
     "email": "contact@veru.legal",
@@ -11,7 +11,7 @@
   "homepage": "https://veru.legal",
   "repository": "https://github.com/zerodays/veru-legal-plugin",
   "license": "MIT",
-  "keywords": ["legal", "law", "case-law", "slovenia", "eu", "gdpr", "legal-research"],
+  "keywords": ["legal", "law", "legislation", "case-law", "legal-research", "eu", "gdpr", "slovenia"],
   "icon": "./assets/icon.png",
   "documentationUrl": "https://github.com/zerodays/veru-legal-plugin#readme",
   "supportUrl": "https://veru.legal/en/about",
