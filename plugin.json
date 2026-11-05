@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "veru-legal",
   "version": "1.0.0",
-  "description": "Research legislation and case law in Slovenia, the EU and 200+ other jurisdictions with Veru, with every conclusion cited to official sources.",
+  "description": "Research legislation and case law in Slovenia, the EU and 200+ other jurisdictions, with every conclusion cited to official sources.",
   "author": {
     "name": "verulabs d.o.o.",
     "email": "contact@veru.legal",
@@ -17,7 +17,7 @@
       "interface": {
         "displayName": "Veru Legal",
         "shortDescription": "Legal research with citations",
-        "longDescription": "Veru brings legislation and case law into your conversation, so you can research, reason and draft with sources you can verify. For each question Veru searches the official legal sources of the relevant jurisdiction, reads promising documents in full and returns the relevant statutes and decisions verbatim with canonical citations, so every conclusion is traceable. Coverage spans 200+ jurisdictions; Slovenian and EU law comes directly from PisRS, sodnapraksa.si and EUR-Lex.\n\nBuilt by practising lawyers and engineers in Ljubljana for law firms, in-house legal teams and universities.\n\nRequires a Veru account on a paid plan. Veru is a tool for legal professionals and does not replace professional legal judgment: always review the cited sources before relying on the result.",
+        "longDescription": "Veru is legal AI built by practising lawyers and engineers in Ljubljana. This plugin brings legislation and case law into ChatGPT, so you can research, reason and draft with sources you can verify.\n\nWhen you ask a legal question, Veru searches the official legal sources of the relevant jurisdiction, reads the full text of promising documents and returns the relevant statutes and decisions verbatim. Coverage spans 200+ jurisdictions; Slovenian and EU law comes directly from PisRS, sodnapraksa.si and EUR-Lex. ChatGPT then answers with citations by canonical identifier (for example \"§ 1 KSchG\", \"ZDR-1, 115. člen\", CELEX numbers, court and case number), so every conclusion is traceable.\n\nUse it to:\n- find the statutes and case law that apply to a question in any jurisdiction,\n- check a contract or document against the law that governs it,\n- research how EU law was implemented in national law.\n\nThe plugin is read-only: it retrieves legal sources and does not change anything in your Veru account. Veru hosts data in the EU, does not train AI models on your data and uses zero data retention with its AI model providers.\n\nRequires a Veru account on a paid plan. Veru is a tool for legal professionals and does not replace professional legal judgment. Always review the cited sources before relying on the result.",
         "developerName": "verulabs d.o.o.",
         "category": "Productivity",
         "capabilities": ["Search legislation", "Search case law", "Cite official sources"],
