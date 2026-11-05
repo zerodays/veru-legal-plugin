@@ -83,6 +83,9 @@
           ]
         },
         "commerce": false
+      },
+      "publication": {
+        "release_notes": "Initial release: Veru legal research in ChatGPT and Codex. One read-only tool, fetch_legal_background, searches official legislation and case law in Slovenia, the EU and 200+ other jurisdictions and returns the relevant documents with citations."
       }
     }
   }
