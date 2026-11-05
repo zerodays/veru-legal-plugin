@@ -1,19 +1,17 @@
 # Veru Legal
 
-Legal AI built the way legal work actually happens. Veru brings Slovenian and EU legislation, case law and your matter documents into Claude, so you can research, reason and draft with sources you can verify.
+Legal AI built the way legal work actually happens. Veru brings Slovenian, EU and international legislation and case law into Claude, so you can research, reason and draft with sources you can verify.
 
 Veru is built by practising lawyers and engineers in Ljubljana and is used by Slovenian law firms, in-house legal teams and the University of Ljubljana.
 
 ## What this plugin does
 
-This plugin connects Claude (chat, Cowork and Claude Code) to your Veru workspace through the Veru MCP server. With it, Claude can:
+This plugin connects Claude (chat, Cowork and Claude Code) to Veru's legal research through the Veru MCP server. With it, Claude can:
 
-- **Research the law in context.** Veru automatically pulls in the current legislation and case law relevant to your question, instead of you searching databases before every task.
+- **Research the law in context.** Veru pulls in the current legislation and case law relevant to your question, instead of you searching databases before every task.
 - **Work from trusted official sources.** Slovenian and EU law comes from PisRS, sodnapraksa.si and EUR-Lex, with coverage of 200+ jurisdictions.
-- **Reason like a trained lawyer.** Veru handles overlapping rules, conflicts of law and methodological questions, not just "what does the statute say".
-- **Show its work.** Every conclusion is traceable: the reasoning steps are visible and every source is cited, so you can stand behind what you deliver.
-- **Stay organised by matter.** Each matter in Veru has its own workspace with its own documents and context, kept separate from your other matters, just like your case files.
-- **Run work in parallel.** Use concurrent Veru agents across several matters or questions at once.
+- **Read the full text.** Veru reads promising documents in full and returns the relevant statutes and decisions verbatim, not summaries.
+- **Cite every source.** Statutes come with their canonical identifier (for example "ZDR-1, 115. člen" or a CELEX number) and decisions with court, case number and date, so you can stand behind what you deliver.
 
 ## Example prompts
 
@@ -33,7 +31,7 @@ Setup assistance is included with the Prime plan. Contact us and we will help yo
 
 This plugin adds one remote MCP server, `veru`, at `https://veru.legal/mcp`. It does not run any local code, hooks or scripts.
 
-When Claude calls a Veru tool, it sends your request and any matter content Claude includes in that call to Veru's servers to retrieve legislation, case law and matter documents and to return results. Veru:
+When Claude calls the Veru tool, it sends the research questions and the context Claude writes for that call, which can include excerpts from your conversation or documents, to Veru's servers. Veru searches official legal sources and returns the relevant legislation and case law. The tool only reads: it does not change anything in your Veru account. Veru:
 
 - hosts documents within the EU,
 - does not train AI models on your data,
